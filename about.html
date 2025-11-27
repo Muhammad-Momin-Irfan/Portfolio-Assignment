@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-root text-root transition-colors flex flex-col min-h-screen">
+
+<div id="pageLoader" class="fixed inset-0 bg-gray-900/30 flex items-center justify-center z-50 transition-opacity duration-500 opacity-100">
+  <div class="w-16 h-16 border-4 border-t-indigo-500 border-r-pink-500 border-b-blue-400 border-l-gray-700 rounded-full animate-spin"></div>
+</div>
+
+
+  <!-- header (same markup as index) -->
+  <header class="site-header fixed w-full top-0 left-0 z-50" id="siteHeader">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between py-3">
+        <a href="index.html" class="font-bold text-lg text-current">Portfolio</a>
+
+        <nav class="hidden md:flex gap-4 items-center" aria-label="Primary">
+          <a href="index.html" class="nav-link px-3 py-2 rounded">Home</a>
+          <a href="about.html" class="nav-link px-3 py-2 rounded">About</a>
+          <a href="skills.html" class="nav-link px-3 py-2 rounded">Skills</a>
+          <a href="projects.html" class="nav-link px-3 py-2 rounded">Projects</a>
+          <a href="contact.html" class="nav-link px-3 py-2 rounded">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <button id="themeBtn" class="icon-btn" aria-label="Theme" title="Theme">
+            <i class="fa-solid fa-moon" aria-hidden="true"></i>
+          </button>
+
+          <button id="menuBtn" class="md:hidden icon-btn" aria-label="Open menu" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="mobile-drawer md:hidden" aria-hidden="true">
+      <ul class="flex flex-col gap-1">
+        <li><a href="index.html" class="block px-3 py-2 nav-link">Home</a></li>
+        <li><a href="about.html" class="block px-3 py-2 nav-link">About</a></li>
+        <li><a href="skills.html" class="block px-3 py-2 nav-link">Skills</a></li>
+        <li><a href="projects.html" class="block px-3 py-2 nav-link">Projects</a></li>
+        <li><a href="contact.html" class="block px-3 py-2 nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="pt-24">
+  <section class="section py-20">
+    <div class="container mx-auto px-4">
+      <div class="card glass p-10 rounded-2xl shadow-lg">
+        <h2 class="section-heading text-center text-3xl font-bold text-gradient-to-r from-indigo-500 via-pink-500 to-blue-400 mb-8">
+          About Me
+        </h2>
+
+        <p class="text dark:text-white mb-4">
+          I'm M. Momin — a front-end developer passionate about building 
+          <span class="font-semibold text-indigo-600">accessible</span>, 
+          <span class="font-semibold text-pink-500">high-performance</span> user interfaces. I focus on crafting delightful micro-interactions that enhance the 
+          <span class="font-semibold text-blue-500">user experience</span>.
+        </p>
+
+        <p class="text dark:text-white/80 mb-6">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in leo vitae nibh pretium dictum. Quisque euismod, nulla sit amet fringilla commodo, purus sapien fermentum lorem, id lacinia nunc elit a justo.
+        </p>
+
+        <div class="about-grid grid md:grid-cols-3 gap-6 mt-6">
+          <!-- Experience -->
+          <div class="flex flex-col gap-2">
+            <h3 class="font-semibold text dark:text-white flex items-center gap-2">
+              <i class="fa-solid fa-briefcase text-indigo-600"></i> Experience
+            </h3>
+            <p class="text dark:text-white/80">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+
+          <!-- Approach -->
+          <div class="flex flex-col gap-2">
+            <h3 class="font-semibold text dark:text-white flex items-center gap-2">
+              <i class="fa-solid fa-lightbulb text-yellow-500"></i> Approach
+            </h3>
+            <p class="text dark:text-white/80">
+              Semantic HTML, maintainable CSS, and subtle animations that clarify UX. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+
+          <!-- Tools & Skills -->
+          <div class="flex flex-col gap-2">
+            <h3 class="font-semibold text dark:text-white flex items-center gap-2">
+              <i class="fa-solid fa-tools text-green-500"></i> Tools & Skills
+            </h3>
+            <p class="text dark:text-white/80 mb-2">
+              HTML5, CSS3, JavaScript, React, Node.js, Git — and constantly learning new technologies.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-indigo-100 text-indigo-700 dark:bg-indigo-600 dark:text-indigo-100 px-3 py-1 rounded-full text-sm font-medium">HTML5</span>
+              <span class="bg-pink-100 text-pink-700 dark:bg-pink-600 dark:text-pink-100 px-3 py-1 rounded-full text-sm font-medium">CSS3</span>
+              <span class="bg-yellow-100 text-yellow-700 dark:bg-yellow-500 dark:text-yellow-100 px-3 py-1 rounded-full text-sm font-medium">JavaScript</span>
+              <span class="bg-sky-100 text-sky-700 dark:bg-sky-500 dark:text-sky-100 px-3 py-1 rounded-full text-sm font-medium">React</span>
+              <span class="bg-green-100 text-green-700 dark:bg-green-500 dark:text-green-100 px-3 py-1 rounded-full text-sm font-medium">Node.js</span>
+              <span class="bg-gray-100 text-gray-700 dark:bg-gray-500 dark:text-gray-100 px-3 py-1 rounded-full text-sm font-medium">Git</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="text dark:text-white/80 mt-6">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus, sapien vel euismod cursus, sapien justo consequat mauris, ac iaculis nulla turpis eget sapien. Sed nec efficitur felis.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+  
+  <footer class="site-footer mt-auto bg-gray-900 dark:bg-gray-800 text-gray-400 py-8">
+  <div class="container mx-auto px-4 text-center text-sm">
+    © <span id="year"></span> Built with 
+    <span class="text-indigo-400 font-semibold">HTML</span>, 
+    <span class="text-indigo-400 font-semibold">Tailwind</span> & 
+    <span class="text-indigo-400 font-semibold">JS</span>
+  </div>
+</footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

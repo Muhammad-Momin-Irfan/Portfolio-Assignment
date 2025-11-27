@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-root text-root transition-colors">
+  
+<div id="pageLoader" class="fixed inset-0 bg-gray-900/30 flex items-center justify-center z-50 transition-opacity duration-500 opacity-100">
+  <div class="w-16 h-16 border-4 border-t-indigo-500 border-r-pink-500 border-b-blue-400 border-l-gray-700 rounded-full animate-spin"></div>
+</div>
+
+
+  <header class="site-header fixed w-full top-0 left-0 z-50" id="siteHeader">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between py-3">
+        <a href="index.html" class="font-bold text-lg text-current">Portfolio</a>
+
+        <nav class="hidden md:flex gap-4 items-center" aria-label="Primary">
+          <a href="index.html" class="nav-link px-3 py-2 rounded">Home</a>
+          <a href="about.html" class="nav-link px-3 py-2 rounded">About</a>
+          <a href="skills.html" class="nav-link px-3 py-2 rounded">Skills</a>
+          <a href="projects.html" class="nav-link px-3 py-2 rounded">Projects</a>
+          <a href="contact.html" class="nav-link px-3 py-2 rounded">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <button id="themeBtn" class="icon-btn" aria-label="Theme" title="Theme">
+            <i class="fa-solid fa-moon" aria-hidden="true"></i>
+          </button>
+
+          <button id="menuBtn" class="md:hidden icon-btn" aria-label="Open menu" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="mobile-drawer md:hidden" aria-hidden="true">
+      <ul class="flex flex-col gap-1">
+        <li><a href="index.html" class="block px-3 py-2 nav-link">Home</a></li>
+        <li><a href="about.html" class="block px-3 py-2 nav-link">About</a></li>
+        <li><a href="skills.html" class="block px-3 py-2 nav-link">Skills</a></li>
+        <li><a href="projects.html" class="block px-3 py-2 nav-link">Projects</a></li>
+        <li><a href="contact.html" class="block px-3 py-2 nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+          <main class="pt-24">
+            <section class="section py-20">
+              <div class="container mx-auto px-4">
+                <h2 class="section-heading text-center text-3xl font-bold text-gradient-to-r from-indigo-500 via-pink-500 to-blue-400 mb-8">
+          Get in touch
+        </h2>
+
+        <div class="contact-grid mt-8 grid md:grid-cols-[1fr_360px] gap-6">
+          <form id="contactForm" class="contact-card glass p-6" novalidate>
+            <label class="block">
+                <span class="font-semibold text dark:text-gray-100">Name</span>
+                <input name="name" type="text" required class="mt-2 input border border border-gray-400 dark:border-gray-600 rounded px-3 py-2 w-full bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition" />
+              </label>
+
+              <label class="block mt-4">
+                <span class="font-semibold text dark:text-gray-100">Email</span>
+                <input name="email" type="email" required class="mt-2 input border border border-gray-400 dark:border-gray-600 rounded px-3 py-2 w-full bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition" />
+              </label>
+
+              <label class="block mt-4">
+                <span class="font-semibold text dark:text-gray-100">Message</span>
+                <textarea name="message" rows="6" required class="mt-2 input border border border-gray-400 dark:border-gray-600 rounded px-3 py-2 w-full bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition"></textarea>
+              </label>
+
+            <div class="form-row mt-4 flex flex-wrap gap-4 justify-start">
+              <button 
+                type="submit" 
+                class="btn-primary bg-indigo-600 dark:bg-indigo-500 text-white font-semibold px-6 py-3 rounded-xl shadow-lg hover:bg-indigo-500 dark:hover:bg-indigo-400 hover:shadow-xl transition-all duration-200"
+              >
+                Send Message
+              </button>
+
+              <button 
+                type="reset" 
+                class="btn-ghost bg-transparent border border-gray-400 dark:border-gray-600 text dark:text-gray-200 font-semibold px-6 py-3 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 hover:border-gray-500 dark:hover:border-gray-400 transition-all duration-200"
+              >
+                Reset
+              </button>
+            </div>
+
+
+            <p id="formStatus" class="small text-muted mt-3" aria-live="polite"></p>
+          </form>
+
+          <aside class="contact-info glass p-6">
+            <h4 class="font-semibold">Contact Info</h4>
+            <p class="text-muted mt-2">Email: <a href="mailto:abc@example.com" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 underline transition-colors duration-200">abc@example.com</a></p>
+            <p class="text-muted mt-2">Location: Remote</p>
+            <p class="text-muted mt-2">Available for freelance & full-time</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="site-footer py-8">
+    <div class="container mx-auto px-4 text-center text-muted">
+      © <span id="year"></span> Built with HTML, Tailwind & JS
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

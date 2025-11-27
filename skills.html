@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-root text-root transition-colors flex flex-col min-h-screen">
+
+
+  <header class="site-header fixed w-full top-0 left-0 z-50" id="siteHeader">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between py-3">
+        <a href="index.html" class="font-bold text-lg text-current">Portfolio</a>
+
+        <nav class="hidden md:flex gap-4 items-center" aria-label="Primary">
+          <a href="index.html" class="nav-link px-3 py-2 rounded">Home</a>
+          <a href="about.html" class="nav-link px-3 py-2 rounded">About</a>
+          <a href="skills.html" class="nav-link px-3 py-2 rounded">Skills</a>
+          <a href="projects.html" class="nav-link px-3 py-2 rounded">Projects</a>
+          <a href="contact.html" class="nav-link px-3 py-2 rounded">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <button id="themeBtn" class="icon-btn" aria-label="Theme" title="Theme">
+            <i class="fa-solid fa-moon" aria-hidden="true"></i>
+          </button>
+
+          <button id="menuBtn" class="md:hidden icon-btn" aria-label="Open menu" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="mobile-drawer md:hidden" aria-hidden="true">
+      <ul class="flex flex-col gap-1">
+        <li><a href="index.html" class="block px-3 py-2 nav-link">Home</a></li>
+        <li><a href="about.html" class="block px-3 py-2 nav-link">About</a></li>
+        <li><a href="skills.html" class="block px-3 py-2 nav-link">Skills</a></li>
+        <li><a href="projects.html" class="block px-3 py-2 nav-link">Projects</a></li>
+        <li><a href="contact.html" class="block px-3 py-2 nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+<div id="pageLoader" class="fixed inset-0 bg-gray-900/30 flex items-center justify-center z-50 transition-opacity duration-500 opacity-100">
+  <div class="w-16 h-16 border-4 border-t-indigo-500 border-r-pink-500 border-b-blue-400 border-l-gray-700 rounded-full animate-spin"></div>
+</div>
+
+  <main class="pt-24">
+  <section class="section py-20">
+    <div class="container mx-auto px-4">
+      <h2 class="section-heading text-center text-3xl font-bold text-gradient-to-r from-indigo-500 via-pink-500 to-blue-400 mb-12">Skills</h2>
+
+      <div class="skills-wrap mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Skill card -->
+        <div class="skill glass p-5 flex flex-col gap-4 hover:scale-105 hover:shadow-2xl transition-transform duration-300">
+          <div class="flex items-center gap-3">
+            <i class="fa-brands fa-html5 fa-2x text-orange-500"></i>
+            <div>
+              <div class="font-semibold text">HTML5</div>
+              <div class="text-sm text">Expert</div>
+            </div>
+          </div>
+          <!-- Skill bar -->
+          <div class="w-full bg-white/20 rounded-full h-3 overflow-hidden">
+            <div class="bg-orange-500 h-3 rounded-full w-5/5 transition-all duration-1000"></div>
+          </div>
+        </div>
+
+        <div class="skill glass p-5 flex flex-col gap-4 hover:scale-105 hover:shadow-2xl transition-transform duration-300">
+          <div class="flex items-center gap-3">
+            <i class="fa-brands fa-css3-alt fa-2x text-blue-500"></i>
+            <div>
+              <div class="font-semibold text">CSS3</div>
+              <div class="text-sm text">Expert</div>
+            </div>
+          </div>
+          <div class="w-full bg-white/20 rounded-full h-3 overflow-hidden">
+            <div class="bg-blue-500 h-3 rounded-full w-5/5 transition-all duration-1000"></div>
+          </div>
+        </div>
+
+        <div class="skill glass p-5 flex flex-col gap-4 hover:scale-105 hover:shadow-2xl transition-transform duration-300">
+          <div class="flex items-center gap-3">
+            <i class="fa-brands fa-js-square fa-2x text-yellow-400"></i>
+            <div>
+              <div class="font-semibold text">JavaScript</div>
+              <div class="text-sm text">Advanced</div>
+            </div>
+          </div>
+          <div class="w-full bg-white/20 rounded-full h-3 overflow-hidden">
+            <div class="bg-yellow-400 h-3 rounded-full w-4/5 transition-all duration-1000"></div>
+          </div>
+        </div>
+
+        <div class="skill glass p-5 flex flex-col gap-4 hover:scale-105 hover:shadow-2xl transition-transform duration-300">
+          <div class="flex items-center gap-3">
+            <i class="fa-brands fa-react fa-2x text-sky-400"></i>
+            <div>
+              <div class="font-semibold text">React</div>
+              <div class="text-sm text">Intermediate</div>
+            </div>
+          </div>
+          <div class="w-full bg-white/20 rounded-full h-3 overflow-hidden">
+            <div class="bg-sky-400 h-3 rounded-full w-3/5 transition-all duration-1000"></div>
+          </div>
+        </div>
+
+        <div class="skill glass p-5 flex flex-col gap-4 hover:scale-105 hover:shadow-2xl transition-transform duration-300">
+          <div class="flex items-center gap-3">
+            <i class="fa-brands fa-node-js fa-2x text-green-500"></i>
+            <div>
+              <div class="font-semibold text">Node.js</div>
+              <div class="text-sm text">Intermediate</div>
+            </div>
+          </div>
+          <div class="w-full bg-white/20 rounded-full h-3 overflow-hidden">
+            <div class="bg-green-500 h-3 rounded-full w-3/5 transition-all duration-1000"></div>
+          </div>
+        </div>
+
+        <div class="skill glass p-5 flex flex-col gap-4 hover:scale-105 hover:shadow-2xl transition-transform duration-300">
+          <div class="flex items-center gap-3">
+            <i class="fa-solid fa-code-branch fa-2x text-gray-400"></i>
+            <div>
+              <div class="font-semibold text">Git</div>
+              <div class="text-sm text">Daily</div>
+            </div>
+          </div>
+          <div class="w-full bg-white/20 rounded-full h-3 overflow-hidden">
+            <div class="bg-gray-400 h-3 rounded-full w-4/5 transition-all duration-1000"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+  <footer class="site-footer mt-auto bg-gray-900 dark:bg-gray-800 text-gray-400 py-8">
+  <div class="container mx-auto px-4 text-center text-sm">
+    © <span id="year"></span> Built with 
+    <span class="text-indigo-400 font-semibold">HTML</span>, 
+    <span class="text-indigo-400 font-semibold">Tailwind</span> & 
+    <span class="text-indigo-400 font-semibold">JS</span>
+  </div>
+</footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
